@@ -24,4 +24,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dayOne = __importStar(require("./days_code/1"));
-dayOne.default();
+// ***** DAY 1
+// * PART 1
+const dayOnePartOneSolution = dayOne.partOne();
+console.log(`Day 1 (part I) - Elf carrying the most calories is carrying ${dayOnePartOneSolution} calories.`);
+const dayOnePartTwoSolution = dayOne.partTwo();
+console.log(`Day 1 (part II) - Three elves carrying the most calories are carrying ${dayOnePartTwoSolution} calories.`);
