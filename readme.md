@@ -1,4 +1,4 @@
-# ADVENT OF CODE
-## Solutions made in JavaScript
+# ADVENT OF CODE 2022 🎄🎄🎄
+### Solved with Node/TypeScript 
 
-### Happy Christmas everyone, keep on coding 🎄🎄🎄
+##### Happy Christmas everyone, keep on coding ✨✨✨
