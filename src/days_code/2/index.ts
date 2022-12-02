@@ -4,7 +4,7 @@ import readline from 'readline';
 type OpponentMove = 'A' | 'B' | 'C';
 type SecretCode = 'X' | 'Y' | 'Z';
 type GameMoves = 'R' | 'P' | 'S'; // R - rock, P - paper, S - scissors
-type ResultStatus = 'lose' | 'draw' | 'win'; // R - rock, P - paper, S - scissors
+type ResultStatus = 'lose' | 'draw' | 'win'; 
 
 export const partOne = () => {
   const file = getFileInterface();
