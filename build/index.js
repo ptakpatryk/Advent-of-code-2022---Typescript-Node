@@ -34,6 +34,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const dayOne = __importStar(require("./days_code/1"));
 const dayTwo = __importStar(require("./days_code/2"));
+const dayThree = __importStar(require("./days_code/3"));
 // ***** DAY 1
 // * PART 1
 const dayOnePartOneSolution = dayOne.partOne();
@@ -41,14 +42,21 @@ console.log(`Day 1 (part I) - Elf carrying the most calories is carrying ${dayOn
 // * PART 2
 const dayOnePartTwoSolution = dayOne.partTwo();
 console.log(`Day 1 (part II) - Three elves carrying the most calories are carrying ${dayOnePartTwoSolution} calories.`);
-// ***** DAY 2
 (function () {
     return __awaiter(this, void 0, void 0, function* () {
+        // ***** DAY 2
         // * PART 1
         const dayTwoPartOneSolution = yield dayTwo.partOne();
         console.log(`Day 2 (part I) - according to strategy my total score would be ${dayTwoPartOneSolution} points.`);
         // * PART 2
         const dayTwoPartTwoSolution = yield dayTwo.partTwo();
         console.log(`Day 2 (part I) - according to another strategy my total score would be ${dayTwoPartTwoSolution} points.`);
+        // ***** DAY 3
+        // * PART 1
+        const dayThreePartOneSolution = yield dayThree.partOne();
+        console.log(`Day 3 (part I) - Sum of the priorities of item types is equal ${dayThreePartOneSolution}.`);
+        // * PART 2
+        const dayThreePartTwoSolution = yield dayThree.partTwo();
+        console.log(`Day 3 (part II) - Sum of the priorities of badge item types is equal ${dayThreePartTwoSolution}.`);
     });
 })();
