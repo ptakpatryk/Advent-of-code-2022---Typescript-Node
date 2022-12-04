@@ -1,6 +1,7 @@
 import * as dayOne from './days_code/1';
 import * as dayTwo from './days_code/2';
 import * as dayThree from './days_code/3';
+import * as dayFour from './days_code/4';
 
 // ***** DAY 1
 // * PART 1
@@ -28,5 +29,15 @@ console.log(`Day 1 (part II) - Three elves carrying the most calories are carryi
   // * PART 2
   const dayThreePartTwoSolution = await dayThree.partTwo();
   console.log(`Day 3 (part II) - Sum of the priorities of badge item types is equal ${dayThreePartTwoSolution}.`);
+
+  // ***** DAY 4
+  // * PART 1
+  const dayFourPartOneSolution = await dayFour.partOne();
+  console.log(`Day 4 (part I) - In how many assignment pairs does one range fully contain the other? - ${dayFourPartOneSolution}.`);
+
+  // * PART 2
+  const dayFourPartTwoSolution = await dayFour.partTwo();
+  console.log(`Day 4 (part II) - In how many assignment pairs do the ranges overlap? ${dayFourPartTwoSolution}.`);
+
 })();
 
