@@ -1,5 +1,4 @@
 import fs from 'fs';
-import { argv0 } from 'process';
 import readline from 'readline';
 
 const FILE_PATH = 'public/day_4_input.txt';
