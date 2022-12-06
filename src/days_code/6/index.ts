@@ -7,7 +7,6 @@ export const partOne = () => {
 
   for (let i = 4; i <= signal.length; i++) {
     const markerSlice = signal.slice(i - 4, i);
-    console.log(`for index ${i} - ${markerSlice}`);
 
     if (areLettersUnique(markerSlice)) {
       return i;

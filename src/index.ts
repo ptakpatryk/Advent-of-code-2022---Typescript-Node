@@ -50,10 +50,10 @@ import * as daySix from './days_code/6';
 
   // ***** DAY 6
   // * PART 1
-  const daySixPartOneSolution = dayOne.partOne();
+  const daySixPartOneSolution = daySix.partOne();
   console.log(`Day 6 (part I) - How many characters need to be processed before the first start-of-packet marker is detected? ${daySixPartOneSolution}.`);
   // * PART 2
-  const daySixPartTwoSolution = dayOne.partTwo();
+  const daySixPartTwoSolution = daySix.partTwo();
   console.log(`Day 6 (part II) - How many characters need to be processed before the first start-of-message marker is detected? ${daySixPartTwoSolution}.`);
 })();
 
