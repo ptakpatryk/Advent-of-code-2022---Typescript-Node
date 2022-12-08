@@ -4,6 +4,8 @@ import * as dayThree from './days_code/3';
 import * as dayFour from './days_code/4';
 import * as dayFive from './days_code/5';
 import * as daySix from './days_code/6';
+import * as daySeven from './days_code/7';
+
 
 
 
@@ -55,6 +57,14 @@ import * as daySix from './days_code/6';
   // * PART 2
   const daySixPartTwoSolution = daySix.partTwo();
   console.log(`Day 6 (part II) - How many characters need to be processed before the first start-of-message marker is detected? ${daySixPartTwoSolution}.`);
+
+  // ***** DAY 7
+  // * PART 1
+  const daySevenPartOneSolution = await daySeven.partOne();
+  console.log(`Day 6 (part I) - What is the sum of the total sizes of those directories? ${daySevenPartOneSolution}.`);
+  // * PART 2
+  const daySevenPartTwoSolution = await daySeven.partTwo();
+  console.log(`Day 6 (part II) - What is the total size of that directory? ${daySevenPartTwoSolution}.`);
 })();
 
 
