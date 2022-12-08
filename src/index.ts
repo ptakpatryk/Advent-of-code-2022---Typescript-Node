@@ -5,7 +5,7 @@ import * as dayFour from './days_code/4';
 import * as dayFive from './days_code/5';
 import * as daySix from './days_code/6';
 import * as daySeven from './days_code/7';
-
+import * as dayEight from './days_code/8';
 
 
 
@@ -41,7 +41,7 @@ import * as daySeven from './days_code/7';
   // * PART 2
   const dayFourPartTwoSolution = await dayFour.partTwo();
   console.log(`Day 4 (part II) - In how many assignment pairs do the ranges overlap? ${dayFourPartTwoSolution}.`);
-  
+
   // ***** DAY 5
   // * PART 1
   const dayFivePartOneSolution = await dayFive.partOne();
@@ -61,11 +61,16 @@ import * as daySeven from './days_code/7';
   // ***** DAY 7
   // * PART 1
   const daySevenPartOneSolution = await daySeven.partOne();
-  console.log(`Day 6 (part I) - What is the sum of the total sizes of those directories? ${daySevenPartOneSolution}.`);
+  console.log(`Day 7 (part I) - What is the sum of the total sizes of those directories? ${daySevenPartOneSolution}.`);
   // * PART 2
   const daySevenPartTwoSolution = await daySeven.partTwo();
-  console.log(`Day 6 (part II) - What is the total size of that directory? ${daySevenPartTwoSolution}.`);
+  console.log(`Day 7 (part II) - What is the total size of that directory? ${daySevenPartTwoSolution}.`);
+
+  // ***** DAY 8
+  // * PART 1
+  const dayEightPartOneSolution = dayEight.partOne();
+  console.log(`Day 8 (part I) - How many trees are visible from outside the grid? - ${dayEightPartOneSolution}.`);
+  // * PART 2
+  const dayEightPartTwoSolution = dayEight.partTwo();
+  console.log(`Day 8 (part II) - What is the highest scenic score possible for any tree? - ${dayEightPartTwoSolution}.`);
 })();
-
-
-
