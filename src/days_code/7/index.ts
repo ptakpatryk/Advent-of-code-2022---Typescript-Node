@@ -1,10 +1,8 @@
 import { getFileInterface } from '../../utils';
-import fs from 'fs';
 
 const FILE_PATH = 'public/day_7_input.txt';
 const TOTAL_DISK_SPACE = 70000000;
 const NEEDED_UNUSED_SPACE = 30000000;
-/* const FILE_PATH = 'public/test.txt'; */
 
 type ILineType = 'command' | 'file' | 'directory';
 
@@ -20,7 +18,6 @@ type IDirectory = {
 }
 
 type ISystemStructure = IFile | IDirectory;
-
 
 type IState = {
   currentDirectoryPath: string;
