@@ -6,8 +6,7 @@ import * as dayFive from './days_code/5';
 import * as daySix from './days_code/6';
 import * as daySeven from './days_code/7';
 import * as dayEight from './days_code/8';
-
-
+import * as dayNine from './days_code/9';
 
 (async function() {
   // ***** DAY 1
@@ -73,4 +72,12 @@ import * as dayEight from './days_code/8';
   // * PART 2
   const dayEightPartTwoSolution = dayEight.partTwo();
   console.log(`Day 8 (part II) - What is the highest scenic score possible for any tree? - ${dayEightPartTwoSolution}.`);
+
+  // ***** DAY 9
+  // * PART 1
+  const dayNinePartOneSolution = await dayNine.partOne();
+  console.log(`Day 9 (part I) - How many positions does the tail of the rope visit at least once? - ${dayNinePartOneSolution}.`);
+  // * PART 2
+  const dayNinePartTwoSolution = await dayNine.partTwo();
+  console.log(`Day 9 (part II) - How many positions does the last part of the tail of the rope visit at least once? - ${dayNinePartTwoSolution}.`);
 })();
