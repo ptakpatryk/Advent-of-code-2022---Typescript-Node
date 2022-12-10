@@ -7,6 +7,7 @@ import * as daySix from './days_code/6';
 import * as daySeven from './days_code/7';
 import * as dayEight from './days_code/8';
 import * as dayNine from './days_code/9';
+import * as dayTen from './days_code/10';
 
 (async function() {
   // ***** DAY 1
@@ -80,4 +81,13 @@ import * as dayNine from './days_code/9';
   // * PART 2
   const dayNinePartTwoSolution = await dayNine.partTwo();
   console.log(`Day 9 (part II) - How many positions does the last part of the tail of the rope visit at least once? - ${dayNinePartTwoSolution}.`);
+
+  // ***** DAY 10
+  // * PART 1
+  const dayTenPartOneSolution = await dayTen.partOne();
+  console.log(`Day 10 (part I) - What is the sum of these six signal strengths? - ${dayNinePartOneSolution}.`);
+  // * PART 2
+  const dayTenPartTwoSolution = await dayTen.partTwo();
+  console.log('Day 10 (part II) - What eight capital letters appear on your CRT?');
+  console.log(dayTenPartTwoSolution)
 })();
