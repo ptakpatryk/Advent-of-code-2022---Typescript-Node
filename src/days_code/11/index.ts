@@ -1,10 +1,8 @@
 import fs from 'fs';
-import { parseInt } from 'lodash';
 
-/* const FILE_PATH = 'public/day_11_input.txt'; */
-const FILE_PATH = 'public/test.txt';
+const FILE_PATH = 'public/day_11_input.txt';
 const ROUNDS_TO_PLAY_ONE = 20;
-const ROUNDS_TO_PLAY_TWO = 10000;
+/* const ROUNDS_TO_PLAY_TWO = 10000; */
 
 type IMonkey = {
   id: number;
@@ -40,43 +38,39 @@ export const partOne = () => {
   }
 
   monkeys.sort((a, b) => b.inspectsCount - a.inspectsCount);
-  return monkeys[0].inspectsCount * monkeys[1].inspectsCount;
+  const result = monkeys[0].inspectsCount * monkeys[1].inspectsCount;
+
+  return result;
 }
 
-export const partTwo = () => {
-  let monkeys = getMonkeys();
-
-  for (let round = 1; round <= 20; round++) {
-    monkeys.forEach((monkey) => {
-      // MONKEY TURN
-      monkey.items.map(item => {
-        // record inspection
-        monkey.inspectsCount++;
-        // inspect + get bored with item
-        const inspectedItem = inspectItem(item, monkey.operation);
-        const passesTo = getRecievingMonkeyIndex(inspectedItem, monkey);
-        monkeys[passesTo].items.push(inspectedItem);
-      })
-      // pass item
-      monkey.items = [];
-
-      return monkey;
-    })
-  }
-
-  console.log(monkeys)
-  monkeys.sort((a, b) => b.inspectsCount - a.inspectsCount);
-  console.log(monkeys[0].inspectsCount * monkeys[1].inspectsCount)
-
-}
-
-/* Monkey 0: */
-/*   Starting items: 79, 98 */
-/*   Operation: new = old * 19 */
-/*   Test: divisible by 23 */
-/*     If true: throw to monkey 2 */
-/*     If false: throw to monkey 3 */
+/* export const partTwo = () => { */
+/*   let monkeys = getMonkeys(); */
 /**/
+/*   for (let round = 1; round <= 20; round++) { */
+/*     monkeys.forEach((monkey) => { */
+/*       // MONKEY TURN */
+/*       monkey.items.map(item => { */
+/*         // record inspection */
+/*         monkey.inspectsCount++; */
+/*         // inspect + get bored with item */
+/*         const inspectedItem = divisionBored(inspectItem(item, monkey.operation)); */
+/*         const passesTo = getRecievingMonkeyIndex(inspectedItem, monkey); */
+/*         const modulo = inspectedItem % monkey.testDivider; */
+/*         monkeys[passesTo].items.push(modulo === 0 ? inspectedItem : modulo); */
+/*       }) */
+/*       // pass item */
+/*       monkey.items = []; */
+/**/
+/*       return monkey; */
+/*     }) */
+/*   } */
+/**/
+/*   console.log(monkeys) */
+/*   monkeys.sort((a, b) => b.inspectsCount - a.inspectsCount); */
+/*   console.log(monkeys[0].inspectsCount * monkeys[1].inspectsCount) */
+/**/
+/* } */
+
 
 function getMonkeys() {
   const file = fs.readFileSync(FILE_PATH, 'utf8');
