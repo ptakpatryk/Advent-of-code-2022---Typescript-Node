@@ -2,6 +2,7 @@ import fs from 'fs';
 
 const FILE_PATH = 'public/day_11_input.txt';
 const ROUNDS_TO_PLAY_ONE = 20;
+/* TO BE CONTINUED */
 /* const ROUNDS_TO_PLAY_TWO = 10000; */
 
 type IMonkey = {
