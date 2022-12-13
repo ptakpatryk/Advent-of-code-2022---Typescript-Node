@@ -8,6 +8,8 @@ import * as daySeven from './days_code/7';
 import * as dayEight from './days_code/8';
 import * as dayNine from './days_code/9';
 import * as dayTen from './days_code/10';
+import * as dayTwelve from './days_code/12';
+
 
 
 (async function() {
@@ -86,9 +88,17 @@ import * as dayTen from './days_code/10';
   // ***** DAY 10
   // * PART 1
   const dayTenPartOneSolution = await dayTen.partOne();
-  console.log(`Day 10 (part I) - What is the sum of these six signal strengths? - ${dayNinePartOneSolution}.`);
+  console.log(`Day 10 (part I) - What is the sum of these six signal strengths? - ${dayTenPartOneSolution}.`);
   // * PART 2
   const dayTenPartTwoSolution = await dayTen.partTwo();
   console.log('Day 10 (part II) - What eight capital letters appear on your CRT?');
   console.log(dayTenPartTwoSolution)
+
+  // ***** DAY 12
+  // * PART 1
+  const dayTwelvePartOneSolution = dayTwelve.partOne();
+  console.log(`Day 12 (part I) - What is the fewest steps required to move from your current position to the location that should get the best signal? - ${dayTwelvePartOneSolution}.`);
+  // * PART 2
+  const dayTwelvePartTwoSolution = dayTwelve.partTwo();
+  console.log(`Day 12 (part II) - What is the fewest steps required to move starting from any square with elevation a to the location that should get the best signal? ${dayTwelvePartTwoSolution}`);
 })();
