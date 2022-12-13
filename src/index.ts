@@ -8,8 +8,8 @@ import * as daySeven from './days_code/7';
 import * as dayEight from './days_code/8';
 import * as dayNine from './days_code/9';
 import * as dayTen from './days_code/10';
+import * as dayEleven from './days_code/11';
 import * as dayTwelve from './days_code/12';
-
 
 (async function() {
   // ***** DAY 1
@@ -92,6 +92,11 @@ import * as dayTwelve from './days_code/12';
   const dayTenPartTwoSolution = await dayTen.partTwo();
   console.log('Day 10 (part II) - What eight capital letters appear on your CRT?');
   console.log(dayTenPartTwoSolution)
+
+  // ***** DAY 11
+  // * PART 1
+  const dayElevenPartOneSolution = dayEleven.partOne();
+  console.log(`Day 11 (part I) - What is the level of monkey business after 20 rounds of stuff-slinging simian shenanigans? - ${dayElevenPartOneSolution}.`);
 
   // ***** DAY 12
   // * PART 1
