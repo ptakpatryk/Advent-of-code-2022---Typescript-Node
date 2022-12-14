@@ -11,6 +11,8 @@ import * as dayTen from './days_code/10';
 import * as dayEleven from './days_code/11';
 import * as dayTwelve from './days_code/12';
 import * as dayThirteen from './days_code/13';
+import * as dayFourteen from './days_code/14';
+
 
 
 (async function() {
@@ -115,4 +117,12 @@ import * as dayThirteen from './days_code/13';
   // * PART 2
   const dayThirteenPartTwoSolution = dayThirteen.partTwo();
   console.log(`Day 13 (part II) - What is the decoder key for the distress signal? ${dayThirteenPartTwoSolution}`);
+  
+  // ***** DAY 14
+  // * PART 1
+  const dayFourteenPartOneSolution = dayFourteen.partOne();
+  console.log(`Day 14 (part I) - What is the sum of the indices of those pairs?? - ${dayFourteenPartOneSolution}.`);
+  // * PART 2
+  const dayFourteenPartTwoSolution = dayFourteen.partTwo();
+  console.log(`Day 14 (part II) - What is the decoder key for the distress signal? ${dayFourteenPartTwoSolution}`);
 })();
