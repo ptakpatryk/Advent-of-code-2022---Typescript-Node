@@ -10,6 +10,8 @@ import * as dayNine from './days_code/9';
 import * as dayTen from './days_code/10';
 import * as dayEleven from './days_code/11';
 import * as dayTwelve from './days_code/12';
+import * as dayThirteen from './days_code/13';
+
 
 (async function() {
   // ***** DAY 1
@@ -105,4 +107,12 @@ import * as dayTwelve from './days_code/12';
   // * PART 2
   const dayTwelvePartTwoSolution = dayTwelve.partTwo();
   console.log(`Day 12 (part II) - What is the fewest steps required to move starting from any square with elevation a to the location that should get the best signal? ${dayTwelvePartTwoSolution}`);
+
+  // ***** DAY 13
+  // * PART 1
+  const dayThirteenPartOneSolution = dayThirteen.partOne();
+  console.log(`Day 13 (part I) - What is the sum of the indices of those pairs?? - ${dayThirteenPartOneSolution}.`);
+  // * PART 2
+  const dayThirteenPartTwoSolution = dayThirteen.partTwo();
+  console.log(`Day 13 (part II) - What is the decoder key for the distress signal? ${dayThirteenPartTwoSolution}`);
 })();
