@@ -12,6 +12,7 @@ import * as dayEleven from './days_code/11';
 import * as dayTwelve from './days_code/12';
 import * as dayThirteen from './days_code/13';
 import * as dayFourteen from './days_code/14';
+import * as dayFifteen from './days_code/15';
 
 
 
@@ -116,7 +117,7 @@ import * as dayFourteen from './days_code/14';
   // ***** DAY 13
   // * PART 1
   const dayThirteenPartOneSolution = dayThirteen.partOne();
-  console.log(`Day 13 (part I) - What is the sum of the indices of those pairs?? - ${dayThirteenPartOneSolution}.`);
+  console.log(`Day 13 (part I) - What is the sum of the indices of those pairs? - ${dayThirteenPartOneSolution}.`);
   // * PART 2
   const dayThirteenPartTwoSolution = dayThirteen.partTwo();
   console.log(`Day 13 (part II) - What is the decoder key for the distress signal? ${dayThirteenPartTwoSolution}`);
@@ -124,8 +125,16 @@ import * as dayFourteen from './days_code/14';
   // ***** DAY 14
   // * PART 1
   const dayFourteenPartOneSolution = dayFourteen.partOne();
-  console.log(`Day 14 (part I) - What is the sum of the indices of those pairs?? - ${dayFourteenPartOneSolution}.`);
+  console.log(`Day 14 (part I) - What is the sum of the indices of those pairs? - ${dayFourteenPartOneSolution}.`);
   // * PART 2
   const dayFourteenPartTwoSolution = dayFourteen.partTwo();
   console.log(`Day 14 (part II) - What is the decoder key for the distress signal? ${dayFourteenPartTwoSolution}`);
+
+  // ***** DAY 15
+  // * PART 1
+  const dayFifteenPartOneSolution = await dayFifteen.partOne();
+  console.log(`Day 15 (part I) - In the row where y=2000000, how many positions cannot contain a beacon? - ${dayFifteenPartOneSolution}.`);
+  // * PART 2
+  const dayFifteenPartTwoSolution = await dayFifteen.partTwo();
+  console.log(`Day 15 (part II) - What is its tuning frequency? ${dayFifteenPartTwoSolution}`);
 })();
