@@ -2,8 +2,7 @@ import fs from 'fs';
 
 const FILE_PATH = 'public/day_11_input.txt';
 const ROUNDS_TO_PLAY_ONE = 20;
-/* TO BE CONTINUED */
-/* const ROUNDS_TO_PLAY_TWO = 10000; */
+const ROUNDS_TO_PLAY_TWO = 10000;
 
 type IMonkey = {
   id: number;
@@ -44,34 +43,37 @@ export const partOne = () => {
   return result;
 }
 
-/* export const partTwo = () => { */
-/*   let monkeys = getMonkeys(); */
-/**/
-/*   for (let round = 1; round <= 20; round++) { */
-/*     monkeys.forEach((monkey) => { */
-/*       // MONKEY TURN */
-/*       monkey.items.map(item => { */
-/*         // record inspection */
-/*         monkey.inspectsCount++; */
-/*         // inspect + get bored with item */
-/*         const inspectedItem = divisionBored(inspectItem(item, monkey.operation)); */
-/*         const passesTo = getRecievingMonkeyIndex(inspectedItem, monkey); */
-/*         const modulo = inspectedItem % monkey.testDivider; */
-/*         monkeys[passesTo].items.push(modulo === 0 ? inspectedItem : modulo); */
-/*       }) */
-/*       // pass item */
-/*       monkey.items = []; */
-/**/
-/*       return monkey; */
-/*     }) */
-/*   } */
-/**/
-/*   console.log(monkeys) */
-/*   monkeys.sort((a, b) => b.inspectsCount - a.inspectsCount); */
-/*   console.log(monkeys[0].inspectsCount * monkeys[1].inspectsCount) */
-/**/
-/* } */
+export const partTwo = () => {
+  let monkeys = getMonkeys();
+  const modulus = monkeys.reduce((acc, curr) => curr.testDivider * acc, 1)
 
+  for (let round = 1; round <= ROUNDS_TO_PLAY_TWO; round++) {
+    monkeys.forEach((monkey) => {
+      // MONKEY TURN
+      monkey.items.map(item => {
+        // record inspection
+        monkey.inspectsCount++;
+        // inspect + get bored with item
+        // replaces with congruent numbers 
+        const operation = [monkey.operation[0], monkey.operation[1] === 'old' ? monkey.operation[1] : monkey.operation[1] % modulus ] as IOperation;
+        const inspectedItem = inspectItem(
+          item % modulus,
+          operation
+        );
+        const passesTo = getRecievingMonkeyIndex(inspectedItem, monkey, monkey.testDivider % modulus);
+        monkeys[passesTo].items.push(inspectedItem);
+      })
+      // pass item
+      monkey.items = [];
+
+      return monkey;
+    })
+  }
+
+
+  monkeys.sort((a, b) => b.inspectsCount - a.inspectsCount);
+  return monkeys[0].inspectsCount * monkeys[1].inspectsCount;
+}
 
 function getMonkeys() {
   const file = fs.readFileSync(FILE_PATH, 'utf8');
@@ -89,7 +91,6 @@ function getMonkeys() {
         inspectsCount: 0,
       } as IMonkey
     })
-
 };
 
 function isInt(n: number) {
@@ -116,8 +117,8 @@ function testNumber(n: number, divBy: number) {
 }
 
 // returns monkey index
-function getRecievingMonkeyIndex(item: number, monkey: IMonkey) {
-  const testResult = testNumber(item, monkey.testDivider);
+function getRecievingMonkeyIndex(item: number, monkey: IMonkey, congruentTestDivider?: number) {
+  const testResult = testNumber(item, congruentTestDivider ? congruentTestDivider : monkey.testDivider);
   return testResult ? monkey.passesTo[0] : monkey.passesTo[1];
 }
 
