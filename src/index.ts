@@ -13,8 +13,7 @@ import * as dayTwelve from './days_code/12';
 import * as dayThirteen from './days_code/13';
 import * as dayFourteen from './days_code/14';
 import * as dayFifteen from './days_code/15';
-
-
+import * as daySeventeen from './days_code/17';
 
 (async function() {
   // ***** DAY 1
@@ -137,4 +136,12 @@ import * as dayFifteen from './days_code/15';
   // * PART 2
   const dayFifteenPartTwoSolution = await dayFifteen.partTwo();
   console.log(`Day 15 (part II) - What is its tuning frequency? ${dayFifteenPartTwoSolution}`);
+  
+  // ***** DAY 17
+  // * PART 1
+  const daySeventeenPartOneSolution = daySeventeen.partOne();
+  console.log(`Day 17 (part I) - How many units tall will the tower of rocks be after 2022 rocks have stopped falling? - ${daySeventeenPartOneSolution}.`);
+  // * PART 2
+  /* const daySeventeenPartTwoSolution = await daySeventeen.partTwo(); */
+  /* console.log(`Day 17 (part II) - What is its tuning frequency? ${dayFifteenPartTwoSolution}`); */
 })();
