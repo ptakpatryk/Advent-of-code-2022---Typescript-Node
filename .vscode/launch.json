@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Custom Programs",
+      "preLaunchTask": "Build",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/build/index.js",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
