@@ -14,6 +14,8 @@ import * as dayThirteen from './days_code/13';
 import * as dayFourteen from './days_code/14';
 import * as dayFifteen from './days_code/15';
 import * as daySeventeen from './days_code/17';
+import * as dayEighteen from './days_code/18';
+
 
 (async function() {
   // ***** DAY 1
@@ -141,7 +143,12 @@ import * as daySeventeen from './days_code/17';
   // * PART 1
   const daySeventeenPartOneSolution = daySeventeen.partOne();
   console.log(`Day 17 (part I) - How many units tall will the tower of rocks be after 2022 rocks have stopped falling? - ${daySeventeenPartOneSolution}.`);
+
+  // ***** DAY 15
+  // * PART 1
+  const dayEighteenPartOneSolution = await dayEighteen.partOne();
+  console.log(`Day 18 (part I) - What is the surface area of your scanned lava droplet? - ${dayEighteenPartOneSolution}.`);
   // * PART 2
-  /* const daySeventeenPartTwoSolution = await daySeventeen.partTwo(); */
-  /* console.log(`Day 17 (part II) - What is its tuning frequency? ${dayFifteenPartTwoSolution}`); */
+  const dayEighteenPartTwoSolution = await dayEighteen.partTwo();
+  console.log(`Day 18 (part II) - What is the exterior surface area of your scanned lava droplet? ${dayEighteenPartTwoSolution}`);
 })();
